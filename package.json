@@ -1,0 +1,19 @@
+{
+  "name": "project-cpp-js",
+  "version": "1.0.0",
+  "description": "cpp export to js html test build.",
+  "main": "a.out.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lightnet",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "socket.io": "^2.0.4"
+  }
+}

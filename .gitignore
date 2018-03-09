@@ -1,0 +1,5 @@
+bin
+node_modules
+.sconsign.dblite
+*.pyc
+package-lock.json

@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    //"command": "bash",
+    "tasks": [
+        {
+            "taskName": "Launch Application Release",
+            "command": "${workspaceRoot}/${config:output_dir}/${config:development_mode}/${config:output_program}.exe",
+            "args": [
+                ""
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "taskName": "Build emcc javascript Release ",
+            "problemMatcher": "$msCompile",
+            "type": "shell",
+            "command": "emcc src/hello_world.c -o bin/hello.html",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "taskName": "Scons window release clean ",
+            "problemMatcher": "$msCompile",
+            "type": "shell",
+            "command": "scons mode=release -c"
+        },
+        {
+            "taskName": "Build with SCons Release Window",
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "command": "${workspaceRoot}/vsbuild_release.bat"
+        }
+    ]
+}
